@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ t.commands_title }}{% endblock %}
+{% block content %}
+<section class="page-width page-hero">
+  <p class="eyebrow">{{ t.commands_kicker }} <span>02 / LYRACT</span></p>
+  <h1>{{ t.commands_headline_a }}<br>{{ t.commands_headline_b }}</h1>
+  <p class="lede">{{ t.commands_lede }}</p>
+</section>
+
+<section class="page-width command-section">
+  <p class="eyebrow">{{ t.commands_section }}</p>
+  <div class="command-list">
+    {% for item in t.command_items %}
+    <article class="command-row"><code>{{ item.name }}</code><div><h2>{{ item.title }}</h2><p>{{ item.body }}</p></div><span class="command-arg">{{ item.arg }}</span></article>
+    {% endfor %}
+  </div>
+  <p class="note">{{ t.command_note }}</p>
+  <p class="note">{{ t.commands_admin_note }}</p>
+</section>
+{% endblock %}

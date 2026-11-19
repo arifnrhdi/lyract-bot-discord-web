@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{ t.invite_title }}{% endblock %}
+{% block content %}
+<section class="page-width invite-page">
+  <p class="eyebrow">{{ t.invite_kicker }} <span>LYRACT / DISCORD</span></p>
+  <h1>{{ t.invite_headline_a }}<br>{{ t.invite_headline_b }}</h1>
+  <p class="lede">{{ t.invite_before_code }} <code>DISCORD_CLIENT_ID</code> {{ t.invite_after_code }}</p>
+  <a class="button" href="{{ url_for('home') }}">{{ t.invite_home }}</a>
+</section>
+{% endblock %}

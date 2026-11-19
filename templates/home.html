@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}{{ t.home_title }}{% endblock %}
+{% block content %}
+<section class="hero page-width">
+  <div class="hero-copy">
+    
+    <h1 style="font-size: 8rem;">{{ t.home_headline_a }}<span>{{ t.home_headline_accent }}</span></h1>
+    <div class="hero-bottom">
+      
+      <a class="button" href="{{ url_for('invite') }}">{{ t.home_cta }}</a>
+    </div>
+  </div>
+  <figure class="hero-art"><img src="{{ url_for('static', filename='images/lazyier.jpg') }}" alt="{{ t.home_image_alt }}" width="750" height="1000" fetchpriority="high"></figure>
+</section>
+
+<section class="intro-band">
+  <div class="page-width intro-grid">
+    <p class="eyebrow">{{ t.home_band_label }}</p>
+    <p class="intro-copy">{{ t.home_band_copy }}</p>
+  </div>
+</section>
+
+<section class="page-width section-block">
+  <div class="section-heading">
+    <p class="eyebrow">{{ t.home_section_label }}</p>
+    <h2>{{ t.home_section_a }}<br>{{ t.home_section_b }}</h2>
+  </div>
+  <div class="feature-list">
+    <a class="feature-row" href="{{ url_for('commands') }}"><span class="feature-no">01</span><span><strong>{{ t.home_feature_1_title }}</strong><small>{{ t.home_feature_1_body }}</small></span></a>
+    <a class="feature-row" href="{{ url_for('guide') }}"><span class="feature-no">02</span><span><strong>{{ t.home_feature_2_title }}</strong><small>{{ t.home_feature_2_body }}</small></span></a>
+    <a class="feature-row" href="{{ url_for('about') }}"><span class="feature-no">03</span><span><strong>{{ t.home_feature_3_title }}</strong><small>{{ t.home_feature_3_body }}</small></span></a>
+  </div>
+</section>
+
+<section class="invite-strip">
+  <div class="page-width invite-strip-inner">
+    <p class="eyebrow">{{ t.home_invite_label }}</p>
+    <h2>{{ t.home_invite_a }}<br>{{ t.home_invite_b }}</h2>
+    <a class="button button-light" href="{{ url_for('invite') }}">{{ t.home_invite_cta }}</a>
+  </div>
+</section>
+{% endblock %}

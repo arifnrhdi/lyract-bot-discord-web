@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ t.about_title }}{% endblock %}
+{% block content %}
+<section class="page-width page-hero about-hero">
+  <p class="eyebrow">{{ t.about_kicker }} <span>04 / LYRACT</span></p>
+  <h1>{{ t.about_headline_a }}<br>{{ t.about_headline_b }}</h1>
+  <p class="lede">{{ t.about_lede }}</p>
+</section>
+<section class="about-note">
+  <div class="page-width about-grid"><p class="eyebrow">{{ t.about_note_label }}</p><p>{{ t.about_note }}</p></div>
+</section>
+<section class="page-width section-block"><p class="eyebrow">{{ t.about_links_label }}</p><div class="about-links"><a href="{{ url_for('commands') }}">{{ t.about_commands_link }}</a><a href="{{ url_for('guide') }}">{{ t.about_guide_link }}</a><a href="{{ url_for('invite') }}">{{ t.about_invite_link }}</a></div></section>
+{% endblock %}
